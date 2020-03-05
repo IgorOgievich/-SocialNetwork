@@ -4,7 +4,7 @@ import a from './Profile.module.css';
 const Profile = () => {
   return (
     <div className={a.content}>
-        <img src="https://avatanplus.com/files/resources/original/5c013319dece116764af9d39.jpg"/>
+        <img src="https://bipbap.ru/wp-content/uploads/2017/08/siyanie_luchi_liniya_fon_krugi_cvet_1920x1200.jpg"/>
         <div>ava</div>
         <div>my post</div>
         <div>new post</div>
