@@ -1,0 +1,14 @@
+.header  {
+  grid-area: h;
+  background-color: #808080;
+}
+.header img {
+  width: 70px;
+}
+.newheader {
+display: inline-block;
+       width: 45%;
+}
+
+
+
