@@ -4,18 +4,18 @@ import Nav from "./Components/Navigstions/Nav";
 import Profile from "./Components/Profile/Profile"
 import './App.css';
 import Dialogs from "./Components/Dialogs/Dialogs";
+import {BrowserRouter, Route} from "react-router-dom";
 
 const App = () => {
     return (
-        <div className="app">
-            <Header/>
-            <Nav/>
-            {/*<Profile/>*/}
-            <Dialogs/>
-
-
-
-        </div>
+        <BrowserRouter>
+            <div className="app">
+                <Header/>
+                <Nav/>
+                <Route exact path="/Profile" component={ Profile}/>
+                <Route exact path="/Dialogs" component={ Dialogs}/>
+            </div>
+        </BrowserRouter>
     );
 };
 

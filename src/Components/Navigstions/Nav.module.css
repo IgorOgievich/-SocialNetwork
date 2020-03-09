@@ -8,7 +8,7 @@
   color: white;
 
 }
-.nav button {
+.items button {
   margin: 3px;
   position: relative;
   display: inline-block;
@@ -26,9 +26,16 @@
   box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em #800;
   background: linear-gradient(#FB9575, #F45A38 48%, #EA1502 52%, #F02F17);
 }
-.nav button:active {
+.items button:active {
   top: .1em;
   left: .1em;
   box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
 }
+.items button:focus {
+color: gold;
+}
+.items button:hover {
+  color: gold;
+}
+
 
