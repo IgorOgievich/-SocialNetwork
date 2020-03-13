@@ -39,6 +39,8 @@ const Dialogs = () => {
 let message = [
     {message: 'Hello Igor'},
     {message: 'Hello Anna'},
+    {message: 'Hello Den'}
+
 ];
  let messageElement = message.map(me =>  <Message message= {me.message}/> );
 
