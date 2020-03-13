@@ -2,6 +2,14 @@ import React from 'react';
 import a from '../Dialogs/Dialogs.module.css';
 import {NavLink} from "react-router-dom";
 
+// let message = [
+//     {name : "Igor", id : "1"},
+//     {name : "Anna", id : "2"},
+//     {name : "Den", id : "3"},
+// ];
+// let messageElement = message
+//     .map (el => <OneDialog name = {el.name} id = {el.id} /> );
+
 const OneDialog = (props) => {
     return (
     <div className={a.dialog}>
@@ -19,16 +27,28 @@ const Message = (props) => {
 };
 
 const Dialogs = () => {
+    let name = [
+        {name : "Igor", id : "1"},
+        {name : "Anna", id : "2"},
+        {name : "Den", id : "3"},
+    ];
+    let nameElement = name
+        .map (el => <OneDialog name = {el.name} id = {el.id} /> );
+
+
+let message = [
+    {message: 'Hello Igor'},
+    {message: 'Hello Anna'},
+];
+ let messageElement = message.map(me =>  <Message message= {me.message}/> );
+
     return (
         <div className={a.content}>
             <div className={a.userName}>
-            <OneDialog name = "Igor" id = "1"/>
-            <OneDialog name = "Anna" id = "2"/>
-            <OneDialog name = "Denis" id = "3"/>
+                { nameElement }
             </div>
             <div className={a.messages}>
-               <Message message="Hello Igor"/>
-               <Message message="Hi Anna"/>
+                {messageElement}
             </div>
         </div>
 
