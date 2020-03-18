@@ -2,15 +2,7 @@ import React from 'react';
 import a from './MyPosts.module.css';
 import Post from "./Post/Post";
 
-const MyPosts = () => {
-    // let message = [
-    //     {message: "Hi Igor"},
-    //     {message: "Hi Anna"},
-    //     {message: "Hi Den"},
-    //     {message: "Hi Vlad"}
-    // ];
-
-    // let messageElement = message.map(me => {}  )
+const MyPosts = (props) => {
     return (
         <div>
             <div className={a.items}>
@@ -23,7 +15,7 @@ const MyPosts = () => {
                 </div>
             </div>
             <div className={a.message}>
-            <Post />
+            <Post messages = {props.messages} />
             </div>
         </div>
     );
