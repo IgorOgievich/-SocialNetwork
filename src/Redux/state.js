@@ -16,5 +16,11 @@ let state = {
         {name : "Den", id : "3"}
     ]
 };
+export let addPost = (props) => {
+    let newPost = {
+        message: props
+    };
+    state.messages.push(newPost)
+};
 
 export default state;
