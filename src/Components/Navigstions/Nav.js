@@ -6,7 +6,6 @@ const Nav = () => {
     return (
         <div className={a.nav}>
             <div className={a.items}>
-
                 <NavLink to="/Profile" activeClassName={a.active}>
                     <button> Profile</button>
                 </NavLink>

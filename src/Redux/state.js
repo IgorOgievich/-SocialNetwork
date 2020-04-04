@@ -1,43 +1,51 @@
+import profileReducer from "./profile-reducer";
+import dialogsReducer from "./dialogs-reducer";
 
 let store = {
-    _state : {
-        messages : [
-            {message: "Hi Igor"},
-            {message: "Hi Anna"},
-        ],
-        message: [
-            {message: 'Hello Igor'},
-            {message: 'Hello Anna'},
-            {message: 'Hello Den'}
-        ],
-        name:  [
-            {name : "Igor", id : "1"},
-            {name : "Anna", id : "2"},
-            {name : "Den", id : "3"}
-        ],
+    _state: {
+        profilePage: {
+            messages: [
+                {message: "Hi Igor"},
+                {message: "Hi Anna"},
+            ],
+        },
+        dialogsPage: {
+            message: [
+                {message: 'Hello Igor'},
+                {message: 'Hello Anna'},
+                {message: 'Hello Den'}
+            ],
+            name: [
+                {name: "Igor", id: "1"},
+                {name: "Anna", id: "2"},
+                {name: "Den", id: "3"}
+            ],
+            newMessageBody: "",
+        }
 
     },
-    getState () {return this._state;},
-    subscribe (observer) {this._rerender = observer;},
-    _rerender ()  {console.log("HEY")},
-    addPost (postMessage) {
+    getState() {
+        return this._state;
+    },
+    subscribe(observer) {
+        this._rerender = observer;
+    },
+    _rerender() {
+        console.log("HEY")
+    },
+    addPost() {
         let newPost = {
-            message: postMessage
+            message: "AAA"
         };
         this._state.messages.push(newPost);
         this._rerender(this._state);
     },
     dispatch(action) {
-        if (action.type=== "ADD-POST"){
-            let newPost = {
-                message: postMessage
-            };
-            this._state.messages.push(newPost);
-            this._rerender(this._state);
-        }
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+        this._rerender(this._state);
     }
 };
-
 
 export default store;
 window.store = store;

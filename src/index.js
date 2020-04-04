@@ -5,11 +5,14 @@ import store from "./Redux/state";
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {addPost} from "./Redux/state";
+import {BrowserRouter} from "react-router-dom";
 
 let rerender = (state) => {
     ReactDOM.render(
-        <App state = {state} dispatch = {store.dispatch.bind(store)} />, document.getElementById('root')
+        <BrowserRouter>
+        <App state = {state} dispatch = {store.dispatch.bind(store)} store={store} />
+        </BrowserRouter>, document.getElementById('root')
+
     );
 };
 rerender(store.getState());

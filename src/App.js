@@ -8,19 +8,19 @@ import {BrowserRouter, Route} from "react-router-dom";
 
 const App = (props) => {
     return (
-        <BrowserRouter>
-            <div className="app">
-                <Header/>
-                <Nav/>
-                <Route exact path="/Profile" render={() => <Profile messages={props.state.messages}
-                                                                    dispatch={props.dispatch}
-                                                                    newPostText={props.newPostText}
-                />}/>
-                <Route exact path="/Dialogs" render={() => <Dialogs message={props.state.message}
-                                                                    name={props.state.name}
-                />}/>
-            </div>
-        </BrowserRouter>
+        <div className="app">
+            <Header/>
+            <Nav/>
+            <Route exact path="/Profile" render={() => <Profile messages={props.state.profilePage.messages}
+                                                                dispatch={props.dispatch}
+                                                                newPostText={props.newPostText}
+            />}/>
+            <Route exact path="/Dialogs" render={() => <Dialogs message={props.state.message}
+                                                                dispatch={props.dispatch}
+                                                                name={props.state.name}
+                                                                store={props.store}
+            />}/>
+        </div>
     );
 };
 
