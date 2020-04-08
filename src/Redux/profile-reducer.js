@@ -1,5 +1,13 @@
 const Add_Post = "ADD-POST";
-const profileReducer =(state, action) => {
+
+let initialState = {
+        messages: [
+            {message: "Hi Igor"},
+            {message: "Hi Anna"},
+        ],
+    };
+
+const profileReducer =(state=initialState, action) => {
 
     if (action.type=== Add_Post){
         let newPost = {

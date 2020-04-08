@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import store from "./Redux/state";
+import store from "./Redux/redux-store";
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -16,7 +16,10 @@ let rerender = (state) => {
     );
 };
 rerender(store.getState());
-store.subscribe(rerender);
+store.subscribe(() => {
+    let state = store.getState();
+    rerender(state);
+});
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
