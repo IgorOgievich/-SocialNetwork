@@ -5,6 +5,7 @@ import Profile from "./Components/Profile/Profile"
 import './App.css';
 import Dialogs from "./Components/Dialogs/Dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
+import UsersContainer from "./Components/Users/UsersContainer";
 
 const App = (props) => {
     return (
@@ -20,6 +21,7 @@ const App = (props) => {
                                                                 name={props.state.name}
                                                                 store={props.store}
             />}/>
+            <Route exact path="/Users" render={() => <UsersContainer/>}/>
         </div>
     );
 };

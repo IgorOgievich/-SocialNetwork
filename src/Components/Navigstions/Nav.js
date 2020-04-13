@@ -24,6 +24,11 @@ const Nav = () => {
 
                 <button><a> Music </a></button>
             </div>
+            <div className={a.items}>
+                <NavLink to="/Users" activeClassName={a.active}>
+                    <button> Users </button>
+                </NavLink>
+            </div>
         </div>
     );
 };
