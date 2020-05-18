@@ -9,7 +9,7 @@ let initialState = {
 
 const profileReducer =(state=initialState, action) => {
 
-    if (action.type=== Add_Post){
+    if (action.type === Add_Post){
         let newPost = {
             message: "aaa"
         };

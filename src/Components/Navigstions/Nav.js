@@ -18,11 +18,12 @@ const Nav = () => {
             </div>
             <div className={a.items}>
 
-                <button><a> News </a></button>
+                <button> News </button>
             </div>
             <div className={a.items}>
-
-                <button><a> Music </a></button>
+                <NavLink to="/Login" activeClassName={a.active}>
+                    <button> Login </button>
+                </NavLink>
             </div>
             <div className={a.items}>
                 <NavLink to="/Users" activeClassName={a.active}>

@@ -4,8 +4,8 @@ const SET_USERS = "SET_USERS";
 
 let initialState = {
         users: [
-            {id:1, followed: false, name: "Igor", status:"I am a boss", location: {city: "Minsk", country: "Belarus"}},
-            {id:1, followed: false, name: "Anna", status:"I am a girls", location: {city: "Lvov", country: "Ukraine"}},
+            {id:1, followed: false, fullName: "Igor", status:"I am a boss", location: {city: "Minsk", country: "Belarus"}},
+            {id:1, followed: false, fullName: "Anna", status:"I am a girls", location: {city: "Lvov", country: "Ukraine"}},
         ],
     };
 

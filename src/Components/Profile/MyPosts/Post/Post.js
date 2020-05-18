@@ -11,7 +11,7 @@ const OnePost = (props) => {
 
 const Post = (props) => {
 
-    let messageElement = props.messages.map(m => <OnePost message = {m.message}> </OnePost>);
+    let messageElement = props.messages.map(m => <OnePost message = {m.messages}> </OnePost>);
     return (
         <div className={a.items}>
             {messageElement}

@@ -3,6 +3,7 @@ import a from '../Dialogs/Dialogs.module.css';
 import OneDialog from "./OneDialog/OneDialog";
 import Message from "./Message/Message";
 import {addMessageActionCreator, updateNewMessageActionCreator} from "../../Redux/dialogs-reducer";
+import {connect} from "react-redux";
 
 const Dialogs = (props) => {
     let state = props.store.getState().dialogsPage;
@@ -40,7 +41,12 @@ const Dialogs = (props) => {
 
     );
 };
+ let mapStateToProps =(dispatch) => {
+     return{
 
+     }
+ }
 
+const DialogsConnect = connect ()(Dialogs)
 export default Dialogs;
                     

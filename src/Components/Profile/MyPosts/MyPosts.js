@@ -26,7 +26,7 @@ const MyPosts = (props) => {
                 </div>
             </div>
             <div className={a.message}>
-                <Post messages={props.messages}/>
+                <Post/>
             </div>
         </div>
     );
